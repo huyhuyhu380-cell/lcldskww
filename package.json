@@ -1,0 +1,58 @@
+{
+  "name": "ai-tai-xiu-v11",
+  "version": "11.0.0",
+  "description": "AI Tài Xỉu MD5 + Hũ V11.0 - Pattern Frequency Weighting Edition với 24 thuật toán và 120+ mẫu cầu có trọng số",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "debug": "node --inspect server.js",
+    "test:md5": "curl http://localhost:3000/api/lc79/txmd5",
+    "test:hu": "curl http://localhost:3000/api/lc79/tx",
+    "test:md5-history": "curl http://localhost:3000/api/lc79/txmd5/history",
+    "test:hu-history": "curl http://localhost:3000/api/lc79/tx/history",
+    "test:stats": "curl http://localhost:3000/api/balance/stats",
+    "test:root": "curl http://localhost:3000/",
+    "test:all": "npm run test:md5 && npm run test:hu && npm run test:md5-history && npm run test:hu-history && npm run test:stats"
+  },
+  "keywords": [
+    "tai-xiu",
+    "md5",
+    "hu",
+    "ai",
+    "prediction",
+    "dice",
+    "pattern-recognition",
+    "frequency-weighting",
+    "markov",
+    "ensemble",
+    "machine-learning"
+  ],
+  "author": "cskhgiabao",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "fastify": "^4.28.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cskhgiabao/ai-tai-xiu-v11.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cskhgiabao/ai-tai-xiu-v11/issues"
+  },
+  "homepage": "https://github.com/cskhgiabao/ai-tai-xiu-v11#readme",
+  "config": {
+    "port": 3000,
+    "fetch_interval": 5000,
+    "max_history": 500,
+    "min_confidence": 0.62
+  }
+}
